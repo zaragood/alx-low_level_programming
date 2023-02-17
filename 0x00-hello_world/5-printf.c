@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
- * main - A program that uses printf function to print text tothe console
- * return: 0
+ * main - A program that uses printf function to print test tot console
+ * Retun: 0
  */
 int main(void)
 {
