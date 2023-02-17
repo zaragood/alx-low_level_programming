@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - A program that uses fprintf to print standard error
  * Return: Always 1
