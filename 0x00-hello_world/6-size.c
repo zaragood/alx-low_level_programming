@@ -9,10 +9,11 @@ int main(void)
 	float floatType;
 	double doubleType;
 	char charType;
-	print("%lu bytes\n", sizeof(intType));
-	print("%lu bytes\n", sizeof(floatType));
-	print("%lu bytes\n", sizeof(doubleType));
-	print("%lu byte\n", sizeof(charType));
+
+	printf("%lu bytes\n", sizeof(intType));
+	printf("%lu bytes\n", sizeof(floatType));
+	printf("%lu bytes\n", sizeof(doubleType));
+	printf("%lu byte\n", sizeof(charType));
 	return (0);
 }
 
