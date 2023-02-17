@@ -9,17 +9,17 @@
 int main(void)
 {
 int n;
-if n > 0
+if (n > 0)
 {
-	printf("%d\n is positive", n);
+        printf("%d\n is positive", n);
 }
 else if (n < 0)
 {
-	printf("%d\n is negetive", n);
+        printf("%d\n is negetive", n);
 }
 else
 {
-	printf("%d\n is zero", n);
+        printf("%d\n is zero", n);
 }
-	return (0);
+        return (0);
 }
