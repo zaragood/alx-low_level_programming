@@ -1,25 +1,25 @@
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 /**
- * main - Entry point
- * if - to specify a block of code to be executed
+ * main - entry point
+ * if - to specify a block of code
  * else if - to specify a new condition
- * else - Execute if the same condition is false
- * Return: 0
+ * else - execute this block of code if thesame condition is false
+ * Return: Alway 0
  */
 int main(void)
 {
-int n;
-if (n > 0)
-{
-        printf("%d\n is positive", n);
-}
-else if (n < 0)
-{
-        printf("%d\n is negetive", n);
-}
-else
-{
-        printf("%d\n is zero", n);
-}
-        return (0);
+	int n;
+
+	srand(time(0));
+	n = rand() - RAND_MAX / 2;
+	if (n > 0)
+		printf("%d is positive", n);
+	else if (n < 0)
+		printf("%d is negetive", n);
+	else
+		printf("%d is zero", n);
+	printf("\n");
+	return (0);
 }
