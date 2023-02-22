@@ -4,8 +4,8 @@
  * @int: number
  * Return: returns last digit
  */
-int print_last_digit(int)
+int print_last_digit(int n)
 {
-	_putchar(int + '0');
+	_putchar((n % 10) + '0');
 	return (0);
 }
