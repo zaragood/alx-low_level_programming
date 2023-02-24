@@ -3,7 +3,7 @@
  * print_line - program that prints line
  * @n: number of lines
  *
- * Reaturn: always 0
+ * Return: always 0
  */
 
 void print_line(int n)
