@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	long prime = 612852475143;
+	long prime = 612852475143, div;
 
 	while (div < (prime / 2))
 	{
@@ -15,12 +15,15 @@ int main(void)
 			prime /= 2;
 			continue;
 		}
-		for (dive = 3; div < (prime / 2); dive += 2)
+
+		for (div = 3; div < (prime / 2); div += 2)
 		{
-			if ((prime % div == 0)
+			if ((prime % div) == 0)
 					prime /= div;
 		}
 	}
-	printf("%d\n", prime;
-		return (0);
+
+	printf("%ld\n", prime);
+
+	return (0);
 }
