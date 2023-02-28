@@ -1,19 +1,17 @@
 #include "main.h"
 /**
- * _puts - takes in string
- * @str: string
+ * rev_string - takes in string
+ * @s: string
  * Return: 0
  */
-void rev_string(char *s)
+void rev_string(char *s);
 {
-	int i;
+	int a, b;
 
-	int r;
+	b = 0;
 
+	while (s[b] != '\0')
+		b++;
 
-	for (i = 0; s[i] != '\0'; i++)i
-
-	
-		for (r = i - 1; s[i] != '\0'; r--)
-	
+		for (a = b  - 1; a >= 0; a--)
 }
