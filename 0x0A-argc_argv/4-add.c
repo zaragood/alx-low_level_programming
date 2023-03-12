@@ -10,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int sum, i, j;
+	int sum, num, i, j;
 
 	sum = 0;
 	if (argc == 1)
@@ -30,8 +30,9 @@ int main(int argc, char *argv[])
 			}
 		}
 
-		sum += atoi(values);
-		printf("%d\n", sum);
+		num = atoi(values);
+		sum += num;
 	}
+	printf("%d\n", sum);
 	return (0);
 }
