@@ -8,10 +8,10 @@
  *
  * Return: error if argument is not 1 or 0 if number is negetive
  */
-int cal_num_coins(int *cents, int coin_value)
+int cal_num_coins(int cents, int coin_value)
 {
-	int num_coins = *cents / coin_value;
-	*cents %= coin_value;
+	int num_coins = cents / coin_value;
+	cents %= coin_value;
 	return (num_coins);
 }
 /**
