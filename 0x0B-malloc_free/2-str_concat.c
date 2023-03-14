@@ -9,25 +9,45 @@
  */
 char *str_concat(char *s1, char *s2)
 {
-	int len1, len2;
+	int len1 = 0, len2 = 0, i, j;
 	char *concat;
-
+	
 	if (s1 == NULL)
-	{
-		s2 = "";
-	}
-	if (s2 == NULL)
 	{
 		s1 = "";
 	}
-	len1 = strlen(s1);
-	len2 = strlen(s2);
-	concat = (char *) malloc((len1 + len2 + 1) * sizeof(char));
+	if (s2 == NULL)
+	{
+		s2 = "";
+	}
+	/* count length of s1 */
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		len1++;
+	}
+	/* count length of s2 */
+	for (i = 0; s2[i] != '\0'; i++)
+	{
+		len2++;
+	}
+	/* allocate memory for concatenated string */
+	concat = malloc((len1 + len2 + 1) * sizeof(char));
 	if (concat == NULL)
 	{
 		return (NULL);
 	}
-	strcpy(concat, s1);
-	strcat(concat, s2);
+	/* copy s1 to concat */
+	for (i = 0; s1[i] != '\0'; i++)
+	{
+		concat[i] = s1[i];
+	}
+	/* copy s2 to concat */
+	for (j = 0; s2[j] != '\0'; j++)
+	{
+		concat[len1 + j] = s2[j];
+	}
+	/* add null terminator to end of concat */
+	concat[len1 + j] = '\0';
+
 	return (concat);
 }
