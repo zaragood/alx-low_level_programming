@@ -11,6 +11,7 @@
 int cal_num_coins(int cents, int coin_value)
 {
 	int num_coins = cents / coin_value;
+
 	cents %= coin_value;
 	return (num_coins);
 }
@@ -23,27 +24,28 @@ int cal_num_coins(int cents, int coin_value)
  */
 int main(int argc, char *argv[])
 {
-	int num_coins = 0;
+	int num_coins = 0, num, j, i = 0;
+	char *value;
 
-	int cents = atoi(argv[1]);
-
-	if (argc != 2)
+	if (argc == 1)
 	{
 		printf("Error\n");
-		return (1);
-	}
-	if (cents < 0)
-	{
-		printf("0\n");
 		return (0);
 	}
-
-	num_coins += cal_num_coins(cents, 25);
-	num_coins += cal_num_coins(cents, 10);
-	num_coins += cal_num_coins(cents, 5);
-	num_coins += cal_num_coins(cents, 2);
-	num_coins += cal_num_coins(cents, 1);
-
+	for (i = 1; i < argc; i++)
+	{
+		value = argv[i];
+		for (j = 0; value[j]; j++)
+		{
+			if (value[j] < '0' || value[j] > '9')
+			{
+				printf("Error\n");
+				return (1);
+			}
+		}
+		num += atoi(value);
+		num_coins +=  num;
+	}
 	printf("%d\n", num_coins);
 	return (0);
 }
