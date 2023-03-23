@@ -6,5 +6,10 @@
  */
 void print_name(char *name, void (*f)(char *))
 {
+	/*check if there is a string passed into the pointer name and f*/
+	if (!name || !f)
+	{
+		return;
+	}
 	(*f)(name);
 }
