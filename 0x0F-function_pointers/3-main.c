@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 		exit(98);
 	}
 
-	if (!get_op_func(argv[2]))
+	if (argv[2][1] || !get_op_func(argv[2]))
 	{
 		printf("Error\n");
 		exit(99);
