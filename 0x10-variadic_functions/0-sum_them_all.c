@@ -2,12 +2,14 @@
 /**
  * sum_them_all - function that returns the sum of all its parameters
  * @n: unsigned int
+ * Return: sum
  */
 int sum_them_all(const unsigned int n, ...)
 {
 	unsigned int i, sum = 0;
 
 	va_list list;
+
 	va_start(list, n);
 
 	if (n == 0)
