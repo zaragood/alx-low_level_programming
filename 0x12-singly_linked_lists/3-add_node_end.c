@@ -4,6 +4,7 @@
  * add_node_end - function that adds a new node to a list
  * @head: double pointer to the first node
  * @str: pointer to a string
+ * Return: new node
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
