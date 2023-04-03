@@ -5,12 +5,13 @@
  */
 void free_listint(listint_t *head)
 {
-	listint_t *temp = NULL;
+	listint_t *temp;
+       	temp = head;
 
 	while(temp != NULL)
 	{
-		temp = head;
 		head = head->next;
 		free(temp);
+		temp = head;
 	}
 }
