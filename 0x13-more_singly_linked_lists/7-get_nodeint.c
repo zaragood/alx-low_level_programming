@@ -2,6 +2,7 @@
 /**
  * get_nodeint_at_index - function that returns the nth node of a list
  * @index: index of the node, starting at 0
+ * @head: pointer to the first node
  * Return: nth node or NULL
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
@@ -19,6 +20,10 @@ listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
 		}
 		head = head->next;
 		i++;
+	}
+	if (i != index)
+	{
+		return (NULL);
 	}
 	return (head);
 }
