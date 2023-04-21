@@ -1,8 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void print_opcodes(int number_bytes, unsigned char opcodes[21]);
-
 /**
  * main - entry point
  * @argc: argument count
@@ -12,9 +10,9 @@ void print_opcodes(int number_bytes, unsigned char opcodes[21]);
 int main(int argc, char **argv)
 {
 	int number_bytes, i;
-	unsigned char opcodes[21];
+	unsigned char *ptr;
 
-	if (argc != 23)
+	if (argc != 2)
 	{
 		printf("Error\n");
 		return (1);
