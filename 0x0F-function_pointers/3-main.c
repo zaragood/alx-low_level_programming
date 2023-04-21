@@ -1,4 +1,7 @@
-#include "calc.h"
+#include "3-calc.h"
+#include <stdio.h>
+#include <stddef.h>
+#include <stdlib.h>
 /**
  * main - performs a  simple arithmetic operations
  * @argc: nuber of arguments passed
