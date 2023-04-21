@@ -1,14 +1,14 @@
 #include "variadic_functions.h"
 /**
  * print_all - function that prints anything
- * @string: char * (if the string is NULL, print (nil) instead)
  * @format: list of arguments passed to the function
  */
 
-void print_all(const char *string const format, ...)
+void print_all(const char * const format, ...)
 {
 	va_list lists;
-	char *string;
+	char *s;
+	char ch;
 	int i = 0;
 
 	va_start(lists, format);
@@ -18,7 +18,8 @@ void print_all(const char *string const format, ...)
 		switch (format[i])
 		{
 			case 'c':
-				printf("%c", va_arg(lists, int));
+				ch = va_arg(lists, int);
+				printf("%c", ch);
 				break;
 			case 'i':
 				printf("%d", va_arg(lists, int));
@@ -27,17 +28,17 @@ void print_all(const char *string const format, ...)
 				printf("%f", va_arg(lists, double));
 				break;
 			case 's':
-				string = va_arg(lists, char *);
-				if (string == NULL)
+				s = va_arg(lists, char *);
+				if (s == NULL)
 					printf("(nil)");
 				else
-					printf("%s", string);
+					printf("%s", s);
 				break;
 			default:
 				i++;
 				continue;
 		}
-		if (format[i + 1] != '\0' && (formate[i] == 'c' || format[i] == 'i' || format[i] == 'f' || 's')
+		if (format[i + 1])
 			printf(", ");
 		i++;
 	}
