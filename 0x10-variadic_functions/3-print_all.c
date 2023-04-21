@@ -1,10 +1,11 @@
 #include "variadic_functions.h"
 /**
  * print_all - function that prints anything
- * @format: list of arguments
+ * @string: char * (if the string is NULL, print (nil) instead)
+ * @format: list of arguments passed to the function
  */
 
-void print_all(const char * const format, ...)
+void print_all(const char *string const format, ...)
 {
 	va_list lists;
 	char *string;
@@ -23,7 +24,7 @@ void print_all(const char * const format, ...)
 				printf("%d", va_arg(lists, int));
 				break;
 			case 'f':
-				printf("%f", (float) va_arg(lists, double));
+				printf("%f", va_arg(lists, double));
 				break;
 			case 's':
 				string = va_arg(lists, char *);
@@ -36,7 +37,7 @@ void print_all(const char * const format, ...)
 				i++;
 				continue;
 		}
-		if (format[i + 1] != '\0')
+		if (format[i + 1] != '\0' && (formate[i] == 'c' || format[i] == 'i' || format[i] == 'f' || 's')
 			printf(", ");
 		i++;
 	}
