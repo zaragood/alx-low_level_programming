@@ -1,7 +1,7 @@
 extern printf
 
 section	.data
-	msg	db	'Hello, Holberton', 0
+	msg	db	'Hello, Holberton', 10, 0 ; 10 is ASCII code for newline
 	fmt	db	'%s\n', 0
 
 section	.text
