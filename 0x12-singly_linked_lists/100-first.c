@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * before_main - Function that prints a message before main function is executed
+ * before_main - Function that prints a message before main function
  * Description: This function is decorated with the __attribute__constructor
  * function attribute, which causes it to be executed automatically before the
  * `main` function is executed. The function simply prints the message
