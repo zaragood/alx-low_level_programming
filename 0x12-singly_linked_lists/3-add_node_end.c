@@ -8,16 +8,13 @@
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
-	list_t *new_node, *end_node = NULL;
+	list_t *new_node, *end_node = *head;
 
-	/* check if the string is empty*/
 	if (str == NULL)
 		return (NULL);
-
 	/* create a new node using malloc */
 	new_node = malloc(sizeof(list_t));
 
-	/* check if allocation of memory was sucessfull*/
 	if (new_node == NULL)
 		return (NULL);
 
@@ -39,13 +36,11 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		end_node = *head;
 		/* trasvers the list till it reaches the end node */
 		while (end_node->next != NULL)
 		{
 			end_node = end_node->next;
 		}
-		/* assign the end node to next to point to the new node*/
 		end_node->next = new_node;
 	}
 	return (new_node);
