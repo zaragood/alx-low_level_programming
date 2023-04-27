@@ -17,5 +17,5 @@ This will create an executable file called singly_linked_list. You can then run 
 ./singly_linked_list
 The program will create a new linked list, add some nodes to the list, remove a node from the list, and print the contents of the list.
 
-##Contributing
+## Contributing
 If you would like to contribute to this implementation of a singly linked list in C, please feel free to fork the repository and submit a pull request with your changes. Before submitting a pull request, please make sure to test your changes to ensure that they do not break any existing functionality.
