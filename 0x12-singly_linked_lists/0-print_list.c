@@ -8,7 +8,7 @@
  *
  * Description: This function takes a pointer to the head node of a singly
  * linked list and prints the value of each node in the list.
- * If a node contains a NULL string the function prints "(nil)" instead.
+ * a node contains a NULL string the function prints "(nil)" instead.
  * The function returns the number of nodes in the list.
  **/
 size_t print_list(const list_t *h)
