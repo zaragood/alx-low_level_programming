@@ -14,7 +14,7 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	/* Check if list is empty */
 	if (*head == NULL)
 		return (-1);
-	
+
 	temp = *head;
 
 	/* Check if head node needs to be deleted */
