@@ -11,9 +11,9 @@ size_t listint_len(const listint_t *h)
 	/* while h is pointing to a list of nodes */
 	while (h != NULL)
 	{
-		 number_nodes++;
-		 /* point to the next node the list */
-		 h = h->next;
+		number_nodes++;
+		/* point to the next node the list */
+		h = h->next;
 	}
 	/* return the  number of nodes in the linked list*/
 	return (number_nodes);
