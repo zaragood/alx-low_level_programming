@@ -19,12 +19,12 @@ int pop_listint(listint_t **head)
 		return (0);
 	}
 
-	temp = *head;
 	/* initialize node_data with the data of head node */
-	node_data = temp->n;
-	/* sets *head pointer to tyhe next node in the list */
-	*head = temp->next;
-	free(temp);
+	temp = (*head)->next;
+	node_data = (*head)->n;
+	/* Free *head and sets *head pointer to temp*/
+	free(*head);
+	*head = temp;
 
 	/* returns the head node's data */
 	return (node_data);
