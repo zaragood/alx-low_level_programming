@@ -9,7 +9,7 @@ listint_t *reverse_listint(listint_t **head)
 	listint_t *temp = NULL, *next = NULL;
 
 	/* traverse the list to update each next of the node */
-	while(*head != NULL)
+	while (*head != NULL)
 	{
 		/* only updating each link partr of the each node */
 		next = (*head)->next;
