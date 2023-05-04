@@ -36,5 +36,6 @@ unsigned int binary_to_uint(const char *b)
 		}
 		b++;
 	}
+	/* return the converted digit */
 	return (digit);
 }
