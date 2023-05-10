@@ -10,7 +10,7 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t num_letter = 0;
+	ssize_t num_letter = 0, num_written;
 	int file_descriptor;
 	char *ptr;
 
@@ -42,8 +42,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		close(file_descriptor);
 		return (0);
 	}
+	
 	ptr[num_letter] = '\0';
-	printf("%s", ptr);
+	num_written = write(STDOUT_FILENO, ptr, num_letter);
+	if (num_written ==  -1)
+	{
+		free(ptr);
+		close(file_descriptor);
+		return (0);
+	}
 
 	free(ptr);
 	close(file_descriptor);
